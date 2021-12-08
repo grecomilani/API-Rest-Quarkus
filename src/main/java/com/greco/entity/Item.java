@@ -1,14 +1,22 @@
-package com.greco.dto;
+package com.greco.entity;
 
-import com.greco.entity.Item;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
-public class ItemDTOInput {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Item extends PanacheEntityBase {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
     public String name;
     public int quantity;
     public Double price;
     public String currency;
-
 
     public String getName() {
         return name;
@@ -40,14 +48,5 @@ public class ItemDTOInput {
 
     public void setCurrency(String currency) {
         this.currency = currency;
-    }
-
-    public Item toItem(){
-        Item item = new Item();
-        item.setName(name);
-        item.setQuantity(quantity);
-        item.setPrice(price);
-        item.setCurrency(currency);
-        return item;
     }
 }
