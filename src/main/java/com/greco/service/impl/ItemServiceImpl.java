@@ -5,6 +5,7 @@ import com.greco.entity.Item;
 import com.greco.exception.ItemNotFoundException;
 import com.greco.repository.ItemRepository;
 import com.greco.service.ItemService;
+import io.quarkus.panache.common.Sort;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -28,7 +29,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> getAllItems() {
-        return itemRepository.listAll();
+        return itemRepository.listAll(Sort.ascending("id"));
     }
 
     @Transactional
