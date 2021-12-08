@@ -69,7 +69,7 @@ public class ItemController {
     @APIResponses(value = {
             @APIResponse(responseCode = "200", description = "Success",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = Item.class))),
-            @APIResponse(responseCode = "404", description="Item not found",
+            @APIResponse(responseCode = "404", description = "Item not found",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = ExceptionHandler.ErrorResponseBody.class)))
     })
     public Item updateItem(@PathParam("id") int id, @Valid ItemDTOInput itemDTOInput) throws ItemNotFoundException {
@@ -81,7 +81,7 @@ public class ItemController {
     @Operation(summary = "Deletes a Item", description = "Deletes a Item by id")
     @APIResponses(value = {
             @APIResponse(responseCode = "204", description = "Success"),
-            @APIResponse(responseCode = "404", description="Item not found",
+            @APIResponse(responseCode = "404", description = "Item not found",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = ExceptionHandler.ErrorResponseBody.class)))
     })
     public Response deleteItem(@PathParam("id") long id) throws ItemNotFoundException {
