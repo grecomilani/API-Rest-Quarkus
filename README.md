@@ -1,6 +1,16 @@
-# quarkus Project
+# Simple CRUD - Quarkus Project
+
+![Quarkus Logo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-gqE2ne-nwS0%2FX68qhcbatLI%2FAAAAAAAABCk%2F8V1-YWJrOqU0XqL52jJjVNya5xzT_PPLgCLcBGAsYHQ%2Fs16000%2Fquarkus.jpg&f=1&nofb=1)
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
+
+- [Simple CRUD - Quarkus Project](#simple-crud---quarkus-project)
+  * [Table of Contents](#table-of-contents)
+    * [Extensions](#extensions)
+    * [Running the application in dev mode](#running-the-application-in-dev-mode)
+    * [Access to Swagger UI](#access-to-swagger-ui)
+    * [Packaging and running the application](#packaging-and-running-the-application)
+    * [Creating a native executable](#creating-a-native-executable)
 
 ## Extensions
 To add extensions used in this project
@@ -27,6 +37,11 @@ You can run your application in dev mode that enables live coding using:
 ```
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+
+
+## Access to Swagger UI
+
+http://localhost:8080/swagger-ui.html
 
 ## Packaging and running the application
 
